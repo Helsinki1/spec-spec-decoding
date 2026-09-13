@@ -20,7 +20,6 @@ Python 3.10+ and PyTorch are the only requirements; no model downloads are neede
 python3 -m pip install -r requirements.txt
 python3 demo.py
 python3 demo.py --temperature 0.8
-python3 -m unittest -v
 ```
 
 The demo compares target-only autoregressive decoding (AR), SD, and SSD using a
@@ -97,10 +96,6 @@ bonus-token distribution.
   framework**, not a reproduction of the paper's performance results: SSD can
   be much slower here. Separate GPUs are supported but were not available for
   validation in the development environment.
-
-The tests use small transition-table models with known distributions to check
-acceptance/correction, cache prefixes, hits and fallback, EOS and output limits,
-joint sample probabilities, and concurrency using synchronization events.
 
 ## Papers
 
